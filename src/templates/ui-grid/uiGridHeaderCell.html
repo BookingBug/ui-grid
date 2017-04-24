@@ -42,9 +42,9 @@
     ng-class="{'ui-grid-column-menu-button-last-col': isLastCol}"
     ui-grid-one-bind-aria-label="i18n.headerCell.aria.columnMenuButtonLabel"
     aria-haspopup="true">
-    <div ng-init="currentSort = 'ascending'" ng-show="grid.options.enableSorting" class="ui-grid-column-menu">
-      <i ng-click="currentSort = 'descending'" ng-show="currentSort === 'ascending'" class="fa fa-chevron-down" aria-hidden="true"></i>
-      <i ng-click="currentSort = 'ascending'" ng-show="currentSort === 'descending'" class="fa fa-chevron-up" aria-hidden="true"></i>
+    <div ng-show="grid.options.enableSorting" class="ui-grid-column-menu">
+      <i ng-show="col.sort.direction == asc" class="fa fa-chevron-down" aria-hidden="true"></i>
+      <i ng-show="col.sort.direction == desc" class="fa fa-chevron-up" aria-hidden="true"></i>
     </div>
   </div>
 
