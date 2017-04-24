@@ -39,6 +39,7 @@
     class="ui-grid-column-menu-button"
     ng-if="grid.options.enableColumnMenus && !col.isRowHeader  && col.colDef.enableColumnMenu !== false"
     ng-click="toggleMenu($event)"
+    ng-keypress="$event.keyCode === 13 && toggleMenu($event)"
     ng-class="{'ui-grid-column-menu-button-last-col': isLastCol}"
     ui-grid-one-bind-aria-label="i18n.headerCell.aria.columnMenuButtonLabel"
     aria-haspopup="true">
