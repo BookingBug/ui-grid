@@ -1,5 +1,5 @@
 /*!
- * ui-grid - v4.0.4-b95a672 - 2017-04-24
+ * ui-grid - v4.0.4-618a765 - 2017-04-24
  * Copyright (c) 2017 ; License: MIT 
  */
 
@@ -29046,17 +29046,7 @@ angular.module('ui.grid').run(['$templateCache', function($templateCache) {
 
 
   $templateCache.put('ui-grid/uiGridColumnMenu',
-    "<div class=\"ui-grid-column-menu\"><div ui-grid-menu menu-items=\"menuItems\"><!-- <div class=\"ui-grid-column-menu\">\n" +
-    "    <div class=\"inner\" ng-show=\"menuShown\">\n" +
-    "      <ul>\n" +
-    "        <div ng-show=\"grid.options.enableSorting\">\n" +
-    "          <li ng-click=\"sortColumn($event, asc)\" ng-class=\"{ 'selected' : col.sort.direction == asc }\"><i class=\"ui-grid-icon-sort-alt-up\"></i> Sort Ascending</li>\n" +
-    "          <li ng-click=\"sortColumn($event, desc)\" ng-class=\"{ 'selected' : col.sort.direction == desc }\"><i class=\"ui-grid-icon-sort-alt-down\"></i> Sort Descending</li>\n" +
-    "          <li ng-show=\"col.sort.direction\" ng-click=\"unsortColumn()\"><i class=\"ui-grid-icon-cancel\"></i> Remove Sort</li>\n" +
-    "        </div>\n" +
-    "      </ul>\n" +
-    "    </div>\n" +
-    "  </div> --></div></div>"
+    "<div ng-init=\"currentSort = 'ascending'\" ng-show=\"grid.options.enableSorting\" class=\"ui-grid-column-menu\"><i ng-click=\"currentSort = 'descending\" ng-show=\"currentSort === 'ascending\" class=\"fa fa-chevron-down\" aria-hidden=\"true\"></i> <i ng-click=\"currentSort = 'ascending\" ng-show=\"currentSort === 'descending\" class=\"fa fa-chevron-up\" aria-hidden=\"true\"></i></div>"
   );
 
 
